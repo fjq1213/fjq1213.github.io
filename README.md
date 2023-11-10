@@ -1,9 +1,9 @@
 # Notes
 
 ### Cache
-- cache info: /sys/devices/system/cpu/cpu0/cache
-- hugepage info: sysctl vm.nr_hugepages || cat /proc/sys/vm/nr_hugepages
-- hugepage utility: cat /proc/meminfo | grep -i huge
+- cache info: `/sys/devices/system/cpu/cpu0/cache`
+- hugepage info: `sysctl vm.nr_hugepages` or `cat /proc/sys/vm/nr_hugepages`
+- hugepage utility: `cat /proc/meminfo | grep -i huge`
 
 Test Data on Neoverse-N2:
 - access (pid 0) - acess (pid 0) - huge: 20ns, should be L1 cache latency
@@ -25,8 +25,8 @@ Test Data on Neoverse-N2:
 ```
 
 access: 
-- host: shm_open("shmem0", O_RDWR, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP)
-- guest: int fd = open("/sys/bus/pci/devices/{dev_num}/resource2", O_RDWR);
+- host: `shm_open("shmem0", O_RDWR, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP)`
+- guest: `open("/sys/bus/pci/devices/{dev_num}/resource2", O_RDWR)`
 
 #### virtiofs
 
@@ -49,4 +49,4 @@ access:
   </devices>
 </domain>
 ```
-guest: mount -t virtiofs mount_tag /mnt/mount/path
+guest: `mount -t virtiofs mount_tag /mnt/mount/path`
