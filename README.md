@@ -50,3 +50,6 @@ access:
 </domain>
 ```
 guest: `mount -t virtiofs mount_tag /mnt/mount/path`
+
+### Meltdown & Spectre
+- classification: [A Systematic Evaluation of Transient Execution Attacks and Defenses](https://arxiv.org/pdf/1811.05441.pdf)
