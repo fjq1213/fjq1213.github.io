@@ -51,5 +51,14 @@ access:
 ```
 guest: `mount -t virtiofs mount_tag /mnt/mount/path`
 
-### Meltdown & Spectre
+### PocGen
 - classification: [A Systematic Evaluation of Transient Execution Attacks and Defenses](https://arxiv.org/pdf/1811.05441.pdf)
+- [处理器分支预测攻击研究综述](http://cjc.ict.ac.cn/online/onlinepaper/lc-20221215211059.pdf)
+- [Survey of Transient Execution Attacks and Their Mitigations](https://dl.acm.org/doi/pdf/10.1145/3442479)
+- Spectre V1: [Spectre Attacks: Exploiting Speculative Execution](https://spectreattack.com/spectre.pdf)
+- [NetSpectre](https://martinschwarzl.at/media/files/netspectre.pdf)
+- Spectre V1.1: [Speculative Buffer Overflows: Attacks and Defenses](https://people.csail.mit.edu/vlk/spectre11.pdf)
+- RSC(Residual State Based Covert Channel): [Covert Channels Through Branch Predictors: A Feasibility Study](https://www.cs.wm.edu/~dmitry/assets/files/evtyushkin-hasp15.pdf)
+- RSC+CC: [Understanding and Mitigating Covert Channels Through Branch Predictors](http://www.cs.ucr.edu/~nael/pubs/taco16_branches.pdf)
+- CC(Contention-Based Covert Channels): [Understanding Contention-Based Channels and Using Them for Defense](https://users.ece.utexas.edu/~tiwari/pubs/HPCA-15-contention.pdf)
+- [Spectre Side Channels](https://docs.kernel.org/admin-guide/hw-vuln/spectre.html)
