@@ -62,3 +62,7 @@ guest: `mount -t virtiofs mount_tag /mnt/mount/path`
 - RSC+CC: [Understanding and Mitigating Covert Channels Through Branch Predictors](http://www.cs.ucr.edu/~nael/pubs/taco16_branches.pdf)
 - CC(Contention-Based Covert Channels): [Understanding Contention-Based Channels and Using Them for Defense](https://users.ece.utexas.edu/~tiwari/pubs/HPCA-15-contention.pdf)
 - [Spectre Side Channels](https://docs.kernel.org/admin-guide/hw-vuln/spectre.html)
+
+### GCC's assembler syntax
+- =& means that the output is an early-clobber output. Its initial value is unspecified. It is not a bug to read from an =& operand once it has been assigned a value.
+- = means that the output is write-only. The compiler can choose to give an = output the same location as an input: for that reason, it is usually a bug to ***write to it before the last instruction*** of your assembly snippet.
