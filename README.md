@@ -10,6 +10,8 @@
     </div>
 </div>
 
+<script src="script.js"></script>
+
 ### Cache
 - cache info: `/sys/devices/system/cpu/cpu0/cache`
 - hugepage info: `sysctl vm.nr_hugepages` or `cat /proc/sys/vm/nr_hugepages`
