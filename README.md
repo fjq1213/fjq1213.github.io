@@ -1,5 +1,16 @@
 # Notes
 
+<div class="container">
+    <section 
+    <div class="search-box">
+        <input type="text" placeholder="Seach here..." id="inp-word"/>
+        <button id="search-btn">Search</button>
+    </div>
+    <div class="result" id="result">
+        
+    </div>
+</div>
+
 ### Cache
 - cache info: `/sys/devices/system/cpu/cpu0/cache`
 - hugepage info: `sysctl vm.nr_hugepages` or `cat /proc/sys/vm/nr_hugepages`
