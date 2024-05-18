@@ -4,19 +4,19 @@ const btn = document.getElementById("search-btn");
 
 const transliterationRules = [
     { en: 'shch', ru: 'щ' },
-    { en: 'jo', ru: 'ё' },
+    { en: 'yo', ru: 'ё' },
     { en: 'zh', ru: 'ж' },
     { en: 'ch', ru: 'ч' },
     { en: 'sh', ru: 'ш' },
-    { en: 'ju', ru: 'ю' },
-    { en: 'ja', ru: 'я' },
+    { en: 'yu', ru: 'ю' },
+    { en: 'ya', ru: 'я' },
     { en: 'ts', ru: 'ц' },
     { en: 'a', ru: 'а' },
     { en: 'b', ru: 'б' },
     { en: 'v', ru: 'в' },
     { en: 'g', ru: 'г' },
     { en: 'd', ru: 'д' },
-    { en: 'e', ru: 'е' },
+    { en: 'ye', ru: 'е' },
     { en: 'z', ru: 'з' },
     { en: 'i', ru: 'и' },
     { en: 'j', ru: 'й' },
@@ -68,6 +68,8 @@ function transliterate(word) {
 
 btn.addEventListener("click", () => {
     let inpWord = transliterate(document.getElementById("inp-word").value);
+    console.log(inpWord);
+    result.innerHTML = `<h4 class="word">${inpWord}</h4?`
     fetch(`${url}${inpWord}`).then(response => response.text()).then(data => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
@@ -75,11 +77,11 @@ btn.addEventListener("click", () => {
         const russianContent = doc.querySelector('#Russian')
         if (russianContent) {
             const sectionContent = russianContent.parentElement;
-            result.innerHTML = sectionContent.outerHTML;
+            result.innerHTML += sectionContent.outerHTML;
         } else {
-            result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+            result.innerHTML += `<h3 class="error">Couldn't Find The Word</h3>`;
         }
     }).catch(() => {
-        result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+        result.innerHTML += `<h3 class="error">Couldn't Find The Word</h3>`;
     });
 });
