@@ -1,7 +1,6 @@
 # Notes
 
 <div class="container">
-    <section 
     <div class="search-box">
         <input type="text" placeholder="Seach here..." id="inp-word"/>
         <button id="search-btn">Search</button>
